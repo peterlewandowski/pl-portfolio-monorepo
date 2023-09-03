@@ -1,0 +1,7 @@
+export * from './TopSection'
+export * from '../components/Header'
+export * from '../components/Hero'
+export * from './About'
+export * from './Projects'
+export * from './Testimonials'
+export * from './Footer'
