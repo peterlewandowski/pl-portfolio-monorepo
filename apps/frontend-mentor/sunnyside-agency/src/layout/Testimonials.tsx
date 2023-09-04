@@ -26,11 +26,11 @@ const data = [
 
 export const Testimonials = () => {
     return (
-        <section id="testimonials" className="flex flex-col gap-20 p-40">
+        <section id="testimonials" className="flex flex-col gap-20 px-6 py-16 md:p-40">
             <h2 className="text-center font-fraunces text-xl font-black text-zinc-400">
                 CLIENT TESTIMONIALS
             </h2>
-            <div className="flex justify-center gap-7 text-center">
+            <div className="flex flex-col md:flex-row justify-center gap-7 text-center">
                 {data.map((item) => (
                     <div
                         key={item.name}

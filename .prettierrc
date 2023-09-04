@@ -3,7 +3,7 @@
   "bracketSpacing": true,
   "htmlWhitespaceSensitivity": "css",
   "insertPragma": false,
-  "bracketSameLine": false,
+  "bracketSameLine": true,
   "printWidth": 100,
   "proseWrap": "preserve",
   "quoteProps": "as-needed",
@@ -18,7 +18,7 @@
   "importOrderCaseInsensitive": true,
   "importOrderSortSpecifiers": true,
   "importOrderGroupNamespaceSpecifiers": true,
-  "plugins": ["@trivago/prettier-plugin-sort-imports", "prettier-plugin-tailwindcss"],
+  "plugins": ["@trivago/prettier-plugin-sort-imports","prettier-plugin-tailwindcss"],
   "pluginSearchDirs": false,
   "tailwindFunctions": ["clsx", "cn"]
 }
