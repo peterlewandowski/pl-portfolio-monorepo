@@ -1,4 +1,4 @@
-import HeroArrowIcon from "../images/icon-arrow-down.svg";
+import {ReactComponent as HeroArrowIcon} from "../images/icon-arrow-down.svg";
 
 export const Hero = () => {
     return (

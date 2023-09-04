@@ -1,6 +1,6 @@
 import React from 'react';
 import { Barlow, Fraunces } from 'next/font/google';
-import { About, Footer, Projects, Testimonials, TopSection } from '../layout';
+import { About, Footer, Projects, Testimonials, TopSection } from '../src/layout';
 
 const barlow = Barlow({
   subsets: ['latin'],
@@ -13,10 +13,10 @@ const fraunces = Fraunces({
   variable: '--font-fraunces',
 });
 
-export const Home: React.FC = () => {
+export default function Home() {
   return (
     <main
-      className={`${fraunces.variable} ${barlow.variable} font-barlow text-lg`}
+      className={`${fraunces.variable} ${barlow.variable} text-lg`}
     >
       <TopSection />
       <About />
@@ -25,4 +25,4 @@ export const Home: React.FC = () => {
       <Footer />
     </main>
   );
-};
+}

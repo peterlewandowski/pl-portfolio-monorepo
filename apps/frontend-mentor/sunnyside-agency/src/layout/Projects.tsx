@@ -14,7 +14,7 @@ export const Projects = () => {
                         height="0"
                         sizes="100vw"
                         className="h-auto w-full"
-                        src={milkBottles.src}
+                        src={milkBottles}
                         alt="milk bottles"
                     />
                 </div>
@@ -24,7 +24,7 @@ export const Projects = () => {
                         height="0"
                         sizes="100vw"
                         className="h-auto w-full"
-                        src={orange.src}
+                        src={orange}
                         alt="orange"
                     />
                 </div>
@@ -34,7 +34,7 @@ export const Projects = () => {
                         height="0"
                         sizes="100vw"
                         className="h-auto w-full"
-                        src={cone.src}
+                        src={cone}
                         alt="cone"
                     />
                 </div>
@@ -44,7 +44,7 @@ export const Projects = () => {
                         height="0"
                         sizes="100vw"
                         className="h-auto w-full"
-                        src={sugarCubes.src}
+                        src={sugarCubes}
                         alt="sugar cubes"
                     />
                 </div>

@@ -5,19 +5,19 @@ import thomas from "../images/image-thomas.jpg";
 
 const data = [
     {
-        imageUrl: emily.src,
+        imageUrl: emily,
         name: "Emily B.",
         title: "Marketing Director",
         text: "We put our trust in Sunnyside and they delivered, making sure our needs were met and deadlines were always hit.",
     },
     {
-        imageUrl: thomas.src,
+        imageUrl: thomas,
         name: "Thomas S.",
         title: "Chief Operating Officer",
         text: "Sunnyside’s enthusiasm coupled with their keen interest in our brand’s success made it a satisfying and enjoyable experience.",
     },
     {
-        imageUrl: jennie.src,
+        imageUrl: jennie,
         name: "Jennie F.",
         title: "Business Owner",
         text: "Incredible end result! Our sales increased over 400% when we worked with Sunnyside. Highly recommended!",
@@ -44,13 +44,13 @@ export const Testimonials = () => {
                                 height={72}
                                 className="rounded-full"
                             />
-                            <p className="font-barlow text-lg font-semibold text-gray-600">
+                            <p className="text-lg font-semibold text-gray-600">
                                 {item.text}
                             </p>
                         </div>
                         <div className="flex flex-col gap-4">
                             <h3 className="font-fraunces font-bold">{item.name}</h3>
-                            <h4 className="font-barlow text-sm font-semibold text-zinc-400">
+                            <h4 className="text-sm font-semibold text-zinc-400">
                                 {item.title}
                             </h4>
                         </div>
