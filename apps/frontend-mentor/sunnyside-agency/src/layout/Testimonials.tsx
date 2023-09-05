@@ -26,17 +26,17 @@ const data = [
 
 export const Testimonials = () => {
     return (
-        <section id="testimonials" className="flex flex-col gap-20 px-6 py-16 md:p-40">
-            <h2 className="text-center font-fraunces text-xl font-black text-zinc-400">
+        <section id="testimonials" className="flex flex-col gap-16 md:gap-20 px-6 py-16 md:p-40">
+            <h2 className="text-center font-fraunces tracking-widest text-xl font-black text-zinc-400">
                 CLIENT TESTIMONIALS
             </h2>
-            <div className="flex flex-col md:flex-row justify-center gap-7 text-center">
+            <div className="flex flex-col md:flex-row justify-center gap-16 md:gap-7 text-center">
                 {data.map((item) => (
                     <div
                         key={item.name}
-                        className="flex flex-1 flex-col items-center justify-between gap-16"
+                        className="flex flex-1 flex-col items-center justify-between gap-8 md:gap-16"
                     >
-                        <div className="flex flex-col items-center gap-14">
+                        <div className="flex flex-col items-center gap-8 md:gap-14">
                             <Image
                                 src={item.imageUrl}
                                 alt={item.name}
@@ -48,7 +48,7 @@ export const Testimonials = () => {
                                 {item.text}
                             </p>
                         </div>
-                        <div className="flex flex-col gap-4">
+                        <div className="flex flex-col gap-2">
                             <h3 className="font-fraunces font-bold">{item.name}</h3>
                             <h4 className="text-sm font-semibold text-zinc-400">
                                 {item.title}

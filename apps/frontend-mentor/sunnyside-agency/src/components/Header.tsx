@@ -15,8 +15,9 @@ export const Header = () => {
             {/* Navigation */}
             <nav className="relative flex justify-between">
                 {/* Logo */}
-                <LogoSvg className="mt-1" />
-
+                <a href="#">
+                    <LogoSvg className="mt-1" />
+                </a>
                 {/* Mobile Menu Button */}
                 <div onClick={handleToggleMobileNav} className="block md:hidden">
                     <HamburgerIcon
@@ -51,7 +52,7 @@ export const Header = () => {
                     <li>
                         <a
                             className="font-fraunces rounded-full bg-yellow-400 px-8 py-4 font-bold uppercase text-black md:rounded-3xl md:bg-white md:px-7 md:py-3  md:hover:bg-white/25 md:hover:text-white"
-                            href="#contact">
+                            href="#footer">
                             Contact
                         </a>
                     </li>

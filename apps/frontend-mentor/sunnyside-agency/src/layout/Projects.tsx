@@ -7,7 +7,7 @@ import sugarCubes from "../images/desktop/image-gallery-sugarcubes.jpg";
 export const Projects = () => {
     return (
         <section id="projects">
-            <div className="flex [&>*]:flex-1">
+            <div className="grid grid-cols-2 md:flex md:[&>*]:flex-1">
                 <div>
                     <Image
                         width="0"
