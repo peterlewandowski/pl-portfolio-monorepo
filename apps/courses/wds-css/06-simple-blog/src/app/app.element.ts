@@ -4,7 +4,7 @@ export class AppElement extends HTMLElement {
     public static observedAttributes = [];
 
     connectedCallback() {
-        const title = "wds-learn-css";
+        const title = "wds-css-simple-blog";
         this.innerHTML = `
     <div class="wrapper">
       <div class="container">

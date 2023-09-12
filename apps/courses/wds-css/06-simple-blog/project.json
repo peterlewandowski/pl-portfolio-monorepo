@@ -1,0 +1,57 @@
+{
+    "name": "wds-css-simple-blog",
+    "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+    "projectType": "application",
+    "sourceRoot": "apps/courses/wds-css/06-simple-blog/src",
+    "tags": [],
+    "targets": {
+        "build": {
+            "executor": "@nx/vite:build",
+            "outputs": ["{options.outputPath}"],
+            "defaultConfiguration": "production",
+            "options": {
+                "outputPath": "dist/apps/courses/wds-css/06-simple-blog"
+            },
+            "configurations": {
+                "development": {
+                    "mode": "development"
+                },
+                "production": {
+                    "mode": "production"
+                }
+            }
+        },
+        "serve": {
+            "executor": "@nx/vite:dev-server",
+            "defaultConfiguration": "development",
+            "options": {
+                "buildTarget": "wds-css-simple-blog:build"
+            },
+            "configurations": {
+                "development": {
+                    "buildTarget": "wds-css-simple-blog:build:development",
+                    "hmr": true
+                },
+                "production": {
+                    "buildTarget": "wds-css-simple-blog:build:production",
+                    "hmr": false
+                }
+            }
+        },
+        "preview": {
+            "executor": "@nx/vite:preview-server",
+            "defaultConfiguration": "development",
+            "options": {
+                "buildTarget": "wds-css-simple-blog:build"
+            },
+            "configurations": {
+                "development": {
+                    "buildTarget": "wds-css-simple-blog:build:development"
+                },
+                "production": {
+                    "buildTarget": "wds-css-simple-blog:build:production"
+                }
+            }
+        }
+    }
+}
