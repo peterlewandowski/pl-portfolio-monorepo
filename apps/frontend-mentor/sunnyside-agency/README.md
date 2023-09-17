@@ -1,6 +1,8 @@
 # Frontend Mentor - Sunnyside agency landing page solution
 
-This is a solution to the [Sunnyside agency landing page challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/sunnyside-agency-landing-page-7yVs3B6ef). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
+This is a solution to the [Sunnyside agency landing page challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/sunnyside-agency-landing-page-7yVs3B6ef). 
+
+Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
 ## Table of contents
 
@@ -16,7 +18,6 @@ This is a solution to the [Sunnyside agency landing page challenge on Frontend M
 -   [Author](#author)
 -   [Acknowledgments](#acknowledgments)
 
-**Note: Delete this note and update the table of contents based on what sections you keep.**
 
 ## Overview
 
@@ -37,8 +38,9 @@ Users should be able to:
 
 ### Links
 
-Solution URL: [Frontend Mentor - Solution URL](https://www.frontendmentor.io/solutions/react-nextjs-tailwind-desktopmobile-custom-hook-abHDwXNT4G)
-Live Site URL: [Deployed Site URL](https://frontend-mentor-sunnyside-agency-kohl.vercel.app/)
+Solution URL: [https://www.frontendmentor.io/solutions/react-nextjs-tailwind-desktopmobile-custom-hook-abHDwXNT4G](https://www.frontendmentor.io/solutions/react-nextjs-tailwind-desktopmobile-custom-hook-abHDwXNT4G)
+
+Live Site URL: [https://frontend-mentor-sunnyside-agency-kohl.vercel.app/](https://frontend-mentor-sunnyside-agency-kohl.vercel.app/)
 
 ## My process
 
@@ -52,9 +54,15 @@ Live Site URL: [Deployed Site URL](https://frontend-mentor-sunnyside-agency-kohl
 -   [Tailwind CSS](https://tailwindcss.com/) - For styling
 
 ### What I learned
-#### Static landing-page structuring using semantic html
 
-#### Experimented with React project folder structure. Went with `Layout` (for sections) and `Components` to separate concerns
+#### - Static landing-page structuring using semantic html.
+
+
+#### - Figma VSCode extension to speed up working with assets and Dev Mode to see CSS styling at a glance.
+
+
+#### - Experimented with React project folder structure. Went with `Layout` (for sections) and `Components` to separate concerns:
+
 
 ```tsx
 export default function Home() {
@@ -70,7 +78,10 @@ export default function Home() {
 }
 ```
 
-#### Learned about pros & cons of Flexbox and Grid. It was challenging to get the block-like sections to behave. Grid made it easy for both desktop and mobile responsive views
+
+#### - Learned about pros & cons of `Flexbox` and `Grid`. It was challenging to get the block-like sections to behave.
+
+#### - Grid made it easy for both desktop and mobile responsive views:
 
 ```tsx
 import Image from "next/image";
@@ -89,7 +100,8 @@ export const About = () => {
 };
 ```
 
-#### Working with next/image component (as opposed to `<img />`) was a challenge initially, but documentation and research helped a ton
+
+#### - Working with next/image component (as opposed to `<img />`) was a challenge initially, but documentation and research helped a ton:
 
 ```tsx
 import Image from "next/image";
@@ -117,9 +129,8 @@ export const TopSection = () => {
 };
 ```
 
-#### Figma VSCode extension to speed up working with assets and Dev Mode to see CSS styling at a glance
 
-#### Imported SVGs as React Components and styled them using Tailwind utility classes such as `fill-white`
+#### - Imported SVGs as React Components and styled them using Tailwind utility classes such as `fill-white`:
 
 ```tsx
  <div className="mt-16 flex gap-8 [&>*]:cursor-pointer [&>*]:hover:[&>*>*]:fill-white">
@@ -139,7 +150,8 @@ export const TopSection = () => {
             </div>
 ```
 
-#### Implemented a custom hook `useClickOutside` to handle closing of mobileNav menu on click/touch outside of the menu element
+
+#### - Implemented a custom hook `useClickOutside` to handle closing of mobileNav menu on click/touch outside of the menu element:
 
 ```tsx
 import { useCallback, useEffect, useRef, useState } from "react";
@@ -188,7 +200,9 @@ I will continue advancing my NextJS/React expertise and get even better at funda
 ## Author
 
 Personal Site - [Peter Lewandowski](https://peterlewandowski.dev/)
+
 Frontend Mentor profile - [@peterlewandowski](https://www.frontendmentor.io/profile/peterlewandowski)
+
 GitHub profile - [peterlewandowski](https://github.com/peterlewandowski)
 
 
