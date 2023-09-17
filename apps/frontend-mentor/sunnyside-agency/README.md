@@ -27,18 +27,18 @@ Users should be able to:
 -   View the optimal layout for the site depending on their device's screen size
 -   See hover states for all interactive elements on the page
 
-### Screenshot
+### Screenshots
 
-# Desktop
+#### Desktop
 ![](./public/sunnyside-agency-desktop-screenshot-full.png)
 
-# Mobile
+#### Mobile
 ![](./public/sunnyside-agency-mobile-screenshot-full.png)
 
 ### Links
 
--   Solution URL: [Frontend Mentor - Solution URL](https://www.frontendmentor.io/solutions/react-nextjs-tailwind-desktopmobile-custom-hook-abHDwXNT4G)
--   Live Site URL: [Deployed Site URL](https://frontend-mentor-sunnyside-agency-kohl.vercel.app/)
+Solution URL: [Frontend Mentor - Solution URL](https://www.frontendmentor.io/solutions/react-nextjs-tailwind-desktopmobile-custom-hook-abHDwXNT4G)
+Live Site URL: [Deployed Site URL](https://frontend-mentor-sunnyside-agency-kohl.vercel.app/)
 
 ## My process
 
@@ -52,10 +52,9 @@ Users should be able to:
 -   [Tailwind CSS](https://tailwindcss.com/) - For styling
 
 ### What I learned
+#### Static landing-page structuring using semantic html
 
--   Static landing-page structuring using semantic html
-
--   Experimented with React project folder structure. Went with `Layout` (for sections) and `Components` to separate concerns
+#### Experimented with React project folder structure. Went with `Layout` (for sections) and `Components` to separate concerns
 
 ```tsx
 export default function Home() {
@@ -71,7 +70,7 @@ export default function Home() {
 }
 ```
 
--   Learned about pros & cons of Flexbox and Grid. It was challenging to get the block-like sections to behave. Grid made it easy for both desktop and mobile responsive views
+#### Learned about pros & cons of Flexbox and Grid. It was challenging to get the block-like sections to behave. Grid made it easy for both desktop and mobile responsive views
 
 ```tsx
 import Image from "next/image";
@@ -90,7 +89,7 @@ export const About = () => {
 };
 ```
 
--   Working with next/image component (as opposed to `<img />`) was a challenge initially, but documentation and research helped a ton
+#### Working with next/image component (as opposed to `<img />`) was a challenge initially, but documentation and research helped a ton
 
 ```tsx
 import Image from "next/image";
@@ -118,9 +117,9 @@ export const TopSection = () => {
 };
 ```
 
--   Figma VSCode extension to speed up working with assets and Dev Mode to see CSS styling at a glance
+#### Figma VSCode extension to speed up working with assets and Dev Mode to see CSS styling at a glance
 
--   Imported SVGs as React Components and styled them using Tailwind utility classes such as `fill-white`
+#### Imported SVGs as React Components and styled them using Tailwind utility classes such as `fill-white`
 
 ```tsx
  <div className="mt-16 flex gap-8 [&>*]:cursor-pointer [&>*]:hover:[&>*>*]:fill-white">
@@ -140,7 +139,7 @@ export const TopSection = () => {
             </div>
 ```
 
--   Implemented a custom hook `useClickOutside` to handle closing of mobileNav menu on click/touch outside of the menu element
+#### Implemented a custom hook `useClickOutside` to handle closing of mobileNav menu on click/touch outside of the menu element
 
 ```tsx
 import { useCallback, useEffect, useRef, useState } from "react";
@@ -181,16 +180,16 @@ I will continue advancing my NextJS/React expertise and get even better at funda
 
 ### Useful resources
 
--   [Handling Hover, Focus, and Other States](https://tailwindcss.com/docs/hover-focus-and-other-states) - Tailwind documentation helped me figure out the best way to implement hover states for elements like SVGs.
+[Handling Hover, Focus, and Other States](https://tailwindcss.com/docs/hover-focus-and-other-states) - Tailwind documentation helped me figure out the best way to implement hover states for elements like SVGs.
 
--   [next/image](https://nextjs.org/docs/pages/api-reference/components/image) - NextJS documentation for the `next/image` component for optimizing images was crucial as it is a bit tricky at first. Luckily its widely used and there are plenty of usage examples around the web.
+[next/image](https://nextjs.org/docs/pages/api-reference/components/image) - NextJS documentation for the `next/image` component for optimizing images was crucial as it is a bit tricky at first. Luckily its widely used and there are plenty of usage examples around the web.
 
 
 ## Author
 
--   Personal Site - [Peter Lewandowski](https://peterlewandowski.dev/)
--   Frontend Mentor profile - [@peterlewandowski](https://www.frontendmentor.io/profile/peterlewandowski)
--   GitHub profile - [peterlewandowski](https://github.com/peterlewandowski)
+Personal Site - [Peter Lewandowski](https://peterlewandowski.dev/)
+Frontend Mentor profile - [@peterlewandowski](https://www.frontendmentor.io/profile/peterlewandowski)
+GitHub profile - [peterlewandowski](https://github.com/peterlewandowski)
 
 
 ## Acknowledgments
