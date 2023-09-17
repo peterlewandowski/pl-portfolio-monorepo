@@ -6,6 +6,7 @@ import { ReactComponent as LogoSvg } from "../images/logo.svg";
 
 export const Header = () => {
     const [toggleMobileNav, setToggleMobileNav] = useState(false);
+    
     const { ref, isComponentVisible, setIsComponentVisible } =
         useClickOutside<HTMLUListElement>(toggleMobileNav);
 
