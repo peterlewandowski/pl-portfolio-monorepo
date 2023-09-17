@@ -29,16 +29,16 @@ Users should be able to:
 
 ### Screenshot
 
-- Desktop
-![](./public/sunnyside-agency-desktop-screenshot.png)
+# Desktop
+![](./public/sunnyside-agency-desktop-screenshot-full.png)
 
-- Mobile
-![](./public/sunnyside-agency-mobile-screenshot.png)
+# Mobile
+![](./public/sunnyside-agency-mobile-screenshot-full.png)
 
 ### Links
 
--   Solution URL: [Add solution URL here](https://your-solution-url.com)
--   Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+-   Solution URL: [Frontend Mentor - Solution URL](https://www.frontendmentor.io/solutions/react-nextjs-tailwind-desktopmobile-custom-hook-abHDwXNT4G)
+-   Live Site URL: [Deployed Site URL](https://frontend-mentor-sunnyside-agency-kohl.vercel.app/)
 
 ## My process
 
@@ -174,8 +174,6 @@ export default function useClickOutside<T extends HTMLElement>(initialIsVisible:
 
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
-
 This was a fun and challenging project. I was keen on using and solidifying techniques and tools that I've been utilizing at my job. I am very proud of the work I put in and excited about how the project turned out. 
 
 I will continue advancing my NextJS/React expertise and get even better at fundamentals of HTML and CSS. Can't wait to get started on my next Frontend Mentor challenge!
@@ -190,11 +188,11 @@ I will continue advancing my NextJS/React expertise and get even better at funda
 
 ## Author
 
--   Website - [Peter Lewandowski](https://peterlewandowski.dev/)
--   Frontend Mentor - [@peterlewandowski](https://www.frontendmentor.io/profile/peterlewandowski)
--   GitHub - [peterlewandowski](https://github.com/peterlewandowski)
+-   Personal Site - [Peter Lewandowski](https://peterlewandowski.dev/)
+-   Frontend Mentor profile - [@peterlewandowski](https://www.frontendmentor.io/profile/peterlewandowski)
+-   GitHub profile - [peterlewandowski](https://github.com/peterlewandowski)
 
 
 ## Acknowledgments
 
-A huge thank you to my girlfriend who has been the most supporting of my journey in Software Engineering. Thank you to my mentors from Boca Code and a work!
+A huge thank you to my girlfriend who has been the most supportive in my journey in Software Engineering. Thank you to my mentors from Boca Code and at work!
