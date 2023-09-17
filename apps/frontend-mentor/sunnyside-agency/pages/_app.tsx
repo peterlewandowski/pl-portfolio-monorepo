@@ -6,6 +6,7 @@ function CustomApp({ Component, pageProps }: AppProps) {
     return (
         <>
             <Head>
+                <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
                 <title>Sunnyside Agency</title>
             </Head>
             <main className="app">
