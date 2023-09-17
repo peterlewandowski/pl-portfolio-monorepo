@@ -12,13 +12,13 @@ export const Footer = () => {
                     <SunnyLogo />
                 </a>
                 <div className="mt-10 grid grid-cols-3 gap-14  text-center text-lg font-semibold text-[#458D7E]">
-                    <a className="hover:text-white" href="#">
+                    <a className="hover:text-white" href="#about">
                         About
                     </a>
-                    <a className="hover:text-white" href="#">
+                    <a className="hover:text-white" href="#services">
                         Services
                     </a>
-                    <a className="hover:text-white" href="#">
+                    <a className="hover:text-white" href="#projects">
                         Projects
                     </a>
                 </div>
