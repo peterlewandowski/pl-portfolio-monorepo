@@ -1,1 +1,21 @@
 /* You can add global styles to this file, and also import other style files */
+header, #footer {
+    background-color: purple;
+}
+
+.header-text, #footer {
+    color: white;
+    text-align: center;
+}
+
+.article-title {
+    font-family: Arial;
+}
+
+.article-date {
+    font-style: italic;
+}
+
+.article-author, .article-date {
+    color: gray
+}
