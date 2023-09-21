@@ -4,7 +4,7 @@ export function Index() {
      *
      * Note: The corresponding styles are in the ./index.css file.
      */
-    return <div>BMI-CALCULATOR-LANDING-PAGE</div>;
+    return <div className="bg-red-200 font-inter font-extrabold">BMI-CALCULATOR-LANDING-PAGE</div>;
 }
 
 export default Index;
