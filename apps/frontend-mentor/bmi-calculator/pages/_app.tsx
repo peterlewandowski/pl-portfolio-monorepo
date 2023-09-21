@@ -8,8 +8,6 @@ const inter = Inter({
     variable: "--font-inter",
 });
 
-console.log(inter);
-
 function CustomApp({ Component, pageProps }: AppProps) {
     return (
         <>
