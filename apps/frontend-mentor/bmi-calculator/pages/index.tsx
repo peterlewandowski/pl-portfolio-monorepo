@@ -1,10 +1,15 @@
-export function Index() {
+export default function Index() {
     /*
      * Replace the elements below with your own.
      *
      * Note: The corresponding styles are in the ./index.css file.
      */
-    return <div className="bg-red-200 font-inter font-extrabold">BMI-CALCULATOR-LANDING-PAGE</div>;
+    return (
+        <>
+            <div className="bg-blue font-inter font-extrabold text-white">
+                BMI-CALCULATOR-LANDING-PAGE
+            </div>
+            <div className="font-black">Some other text</div>;
+        </>
+    );
 }
-
-export default Index;
