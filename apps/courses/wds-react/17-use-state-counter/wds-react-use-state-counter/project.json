@@ -1,0 +1,65 @@
+{
+    "name": "courses-wds-react-17-use-state-counter-wds-react-use-state-counter",
+    "$schema": "../../../../../node_modules/nx/schemas/project-schema.json",
+    "sourceRoot": "apps/courses/wds-react/17-use-state-counter/wds-react-use-state-counter/src",
+    "projectType": "application",
+    "targets": {
+        "build": {
+            "executor": "@nx/vite:build",
+            "outputs": ["{options.outputPath}"],
+            "defaultConfiguration": "production",
+            "options": {
+                "outputPath": "dist/apps/courses/wds-react/17-use-state-counter/wds-react-use-state-counter"
+            },
+            "configurations": {
+                "development": {
+                    "mode": "development"
+                },
+                "production": {
+                    "mode": "production"
+                }
+            }
+        },
+        "serve": {
+            "executor": "@nx/vite:dev-server",
+            "defaultConfiguration": "development",
+            "options": {
+                "buildTarget": "courses-wds-react-17-use-state-counter-wds-react-use-state-counter:build"
+            },
+            "configurations": {
+                "development": {
+                    "buildTarget": "courses-wds-react-17-use-state-counter-wds-react-use-state-counter:build:development",
+                    "hmr": true
+                },
+                "production": {
+                    "buildTarget": "courses-wds-react-17-use-state-counter-wds-react-use-state-counter:build:production",
+                    "hmr": false
+                }
+            }
+        },
+        "preview": {
+            "executor": "@nx/vite:preview-server",
+            "defaultConfiguration": "development",
+            "options": {
+                "buildTarget": "courses-wds-react-17-use-state-counter-wds-react-use-state-counter:build"
+            },
+            "configurations": {
+                "development": {
+                    "buildTarget": "courses-wds-react-17-use-state-counter-wds-react-use-state-counter:build:development"
+                },
+                "production": {
+                    "buildTarget": "courses-wds-react-17-use-state-counter-wds-react-use-state-counter:build:production"
+                }
+            }
+        },
+        "test": {
+            "executor": "@nx/vite:test",
+            "outputs": ["{options.reportsDirectory}"],
+            "options": {
+                "passWithNoTests": true,
+                "reportsDirectory": "../../../../../coverage/apps/courses/wds-react/17-use-state-counter/wds-react-use-state-counter"
+            }
+        }
+    },
+    "tags": []
+}
