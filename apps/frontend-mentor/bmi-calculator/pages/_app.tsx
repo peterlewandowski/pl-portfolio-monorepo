@@ -12,7 +12,8 @@ function CustomApp({ Component, pageProps }: AppProps) {
     return (
         <>
             <Head>
-                <title>Welcome to frontend-mentor/bmi-calculator!</title>
+                <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+                <title>BMI Calculator Site</title>
             </Head>
             <main className={inter.variable}>
                 <Component {...pageProps} />
