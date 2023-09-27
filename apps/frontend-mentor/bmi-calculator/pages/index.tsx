@@ -1,3 +1,5 @@
+import { Hero } from "../src/layout/Hero";
+
 export default function Index() {
     /*
      * Replace the elements below with your own.
@@ -6,10 +8,7 @@ export default function Index() {
      */
     return (
         <>
-            <div className="bg-blue font-inter font-extrabold text-white">
-                BMI-CALCULATOR-LANDING-PAGE
-            </div>
-            <div className="font-black">Some other text</div>;
+            <Hero />
         </>
     );
 }

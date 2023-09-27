@@ -14,6 +14,61 @@ module.exports = {
             fontFamily: {
                 inter: "var(--font-inter)",
             },
+            fontSize: {
+                "body-s": [
+                    "14px",
+                    {
+                        lineHeight: "150%",
+                        fontWeight: "400",
+                    },
+                ],
+                "body-m-bold": [
+                    "16px",
+                    {
+                        lineHeight: "150%",
+                        fontWeight: "600",
+                    },
+                ],
+                "body-m": [
+                    "16px",
+                    {
+                        lineHeight: "150%",
+                        fontWeight: "400",
+                    },
+                ],
+                "heading-s": [
+                    "20px",
+                    {
+                        lineHeight: "110%",
+                        letterSpacing: "-0.025rem",
+                        fontWeight: "600",
+                    },
+                ],
+                "heading-m": [
+                    "24px",
+                    {
+                        lineHeight: "110%",
+                        letterSpacing: "-0.075rem",
+                        fontWeight: "600",
+                    },
+                ],
+                "heading-l": [
+                    "48px",
+                    {
+                        lineHeight: "110%",
+                        letterSpacing: "-0.15rem",
+                        fontWeight: "600",
+                    },
+                ],
+                "heading-xl": [
+                    "64px",
+                    {
+                        lineHeight: "110%",
+                        letterSpacing: "-0.02rem",
+                        fontWeight: "600",
+                    },
+                ],
+            },
         },
         colors: {
             blue: "#345FF6",
