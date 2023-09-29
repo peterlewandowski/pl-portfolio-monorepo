@@ -69,14 +69,14 @@ module.exports = {
                     },
                 ],
             },
+            colors: {
+                bmiBlue: "#345FF6",
+                gunmetal: "#253347",
+                electricBlue: "#5E6E85",
+                borderColor: "#D8E2E7",
+            },
         },
-        colors: {
-            blue: "#345FF6",
-            gunmetal: "#253347",
-            electricBlue: "#5E6E85",
-            borderColor: "#D8E2E7",
-            white: colors.white,
-        },
+        
     },
     plugins: [],
 };
