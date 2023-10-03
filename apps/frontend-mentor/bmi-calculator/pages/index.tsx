@@ -1,4 +1,5 @@
 import { Hero } from "../src/layout/Hero";
+import { WhatYourBMI } from "../src/layout/WhatYourBMI";
 
 export default function Index() {
     /*
@@ -9,6 +10,7 @@ export default function Index() {
     return (
         <>
             <Hero />
+            <WhatYourBMI />
         </>
     );
 }
