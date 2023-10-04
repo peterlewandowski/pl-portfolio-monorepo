@@ -1,7 +1,12 @@
+import Image from "next/image";
+import man from "../images/image-man-eating.webp";
+
 export const WhatYourBMI = () => {
     return (
         <div className="mt-52 flex gap-4 [&>*]:basis-1/2">
-            <div className="h-96 w-96 rounded-3xl bg-sky-100" />
+            <div className="h-96 w-96 rounded-3xl bg-sky-100">
+                <Image src={man} alt="A man eating sushi" width={468} height={533} />
+            </div>
             <div className="*******">
                 <h1 className="text-heading-l">What your BMI result means</h1>
                 <div className="text-body-m text-electricBlue">
