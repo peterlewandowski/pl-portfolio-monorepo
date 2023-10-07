@@ -1,10 +1,11 @@
+import { Container } from "../components/Container";
 import { ReactComponent as Logo } from "../images/logo.svg";
 
 export const Hero = () => {
     return (
         <section id="hero" className="relative">
             <div className="absolute -z-50 h-[46.0625rem] w-[61.125rem] rounded-bl-3xl rounded-br-3xl bg-gradient-to-r from-blue-50 to-cyan-100" />
-            <div className="px-36">
+            <Container>
                 <div className="pt-20">
                     <Logo />
                 </div>
@@ -93,7 +94,7 @@ export const Hero = () => {
                         </div>
                     </div>
                 </div>
-            </div>
+            </Container>
         </section>
     );
 };
