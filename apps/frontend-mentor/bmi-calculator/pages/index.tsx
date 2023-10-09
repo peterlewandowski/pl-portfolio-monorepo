@@ -1,5 +1,6 @@
 import { Hero } from "../src/layout/Hero";
 import { LifestyleFactors } from "../src/layout/LifestyleFactors";
+import { Limitations } from "../src/layout/Limitations";
 import { WhatYourBMI } from "../src/layout/WhatYourBMI";
 
 export default function Index() {
@@ -13,6 +14,7 @@ export default function Index() {
             <Hero />
             <WhatYourBMI />
             <LifestyleFactors />
+            <Limitations />
         </>
     );
 }
