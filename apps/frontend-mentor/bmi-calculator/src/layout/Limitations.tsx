@@ -6,7 +6,13 @@ import { ReactComponent as MuscleIcon } from "../images/icon-muscle.svg";
 import { ReactComponent as PregnancyIcon } from "../images/icon-pregnancy.svg";
 import { ReactComponent as RaceIcon } from "../images/icon-race.svg";
 
-const cardsData = [
+export type CardData = {
+    icon: React.ReactNode;
+    title: string;
+    content: string;
+};
+
+const cardsData: CardData[] = [
     {
         icon: <GenderIcon />,
         title: "Gender",
@@ -39,7 +45,19 @@ const cardsData = [
     },
 ];
 
+const cardDataHashMap: Record<string, CardData> = {};
+
+for (const card of cardsData) {
+    cardDataHashMap[card.title] = card;
+}
+
 export const Limitations = () => {
+    const genderCard = cardDataHashMap["Gender"];
+    const ageCard = cardDataHashMap["Age"];
+    const muscleCard = cardDataHashMap["Muscle"];
+    const pregnancyCard = cardDataHashMap["Pregnancy"];
+    const raceCard = cardDataHashMap["Race"];
+
     return (
         <section id="limitations">
             <Container className="flex flex-col">
@@ -53,14 +71,12 @@ export const Limitations = () => {
                             beneficial to use.
                         </p>
                     </div>
-                    {cardsData.map((item) => (
-                        <Card
-                            key={item.title}
-                            icon={item.icon}
-                            title={item.title}
-                            content={item.content}
-                        />
-                    ))}
+                    <Card
+                        key={genderCard.title}
+                        icon={genderCard.icon}
+                        title={genderCard.title}
+                        content={genderCard.content}
+                    />
                 </div>
             </Container>
         </section>
