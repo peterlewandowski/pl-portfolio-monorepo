@@ -46,6 +46,7 @@ const cardsData: CardData[] = [
 ];
 
 const cardDataHashMap: Record<string, CardData> = {};
+console.log("cardDataHashMap: ", cardDataHashMap);
 
 for (const card of cardsData) {
     cardDataHashMap[card.title] = card;
@@ -60,10 +61,10 @@ export const Limitations = () => {
 
     return (
         <section id="limitations">
-            <Container className="flex flex-col">
-                <div className="flex gap-32">
-                    <div>
-                        <h1 className="text-heading-l">Limitations of BMI</h1>
+            <Container className="flex flex-col pt-16">
+                <div className="flex gap-36 pr-24">
+                    <div className="w-2/5">
+                        <h1 className="text-heading-l mb-8">Limitations of BMI</h1>
                         <p className="text-body-m">
                             Although BMI is often a practical indicator of healthy weight, it is not
                             suited for every person. Specific groups should carefully consider their
