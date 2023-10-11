@@ -5,6 +5,7 @@ import { ReactComponent as GenderIcon } from "../images/icon-gender.svg";
 import { ReactComponent as MuscleIcon } from "../images/icon-muscle.svg";
 import { ReactComponent as PregnancyIcon } from "../images/icon-pregnancy.svg";
 import { ReactComponent as RaceIcon } from "../images/icon-race.svg";
+import { ReactComponent as RightCurve } from "../images/pattern-curved-line-right.svg";
 
 export type CardData = {
     icon: React.ReactNode;
@@ -61,7 +62,7 @@ export const Limitations = () => {
 
     return (
         <section id="limitations">
-            <Container className="flex flex-col pt-16">
+            <Container className="flex flex-col pt-16 pb-28">
                 <div className="flex gap-36 pr-24">
                     <div className="w-2/5">
                         <h1 className="text-heading-l mb-8">Limitations of BMI</h1>
@@ -72,12 +73,20 @@ export const Limitations = () => {
                             beneficial to use.
                         </p>
                     </div>
-                    <Card
-                        key={genderCard.title}
-                        icon={genderCard.icon}
-                        title={genderCard.title}
-                        content={genderCard.content}
-                    />
+                    <Card data={genderCard} />
+                </div>
+                <div className="mt-8 flex justify-end gap-8">
+                    <div className="relative flex-1">
+                        <div className="absolute inset-0 flex items-center justify-center">
+                            <RightCurve className="-translate-x-1/2 -translate-y-1/2 transform" />
+                        </div>
+                    </div>
+                    <Card data={ageCard} />
+                    <Card data={muscleCard} />
+                </div>
+                <div className="mt-8 flex justify-center gap-8">
+                    <Card data={pregnancyCard} />
+                    <Card data={raceCard} />
                 </div>
             </Container>
         </section>
