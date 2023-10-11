@@ -1,10 +1,13 @@
 type Props = {
-    icon: React.ReactNode;
-    title: string;
-    content: string;
+    data: {
+        icon: React.ReactNode;
+        title: string;
+        content: string;
+    };
 };
 
-export const Card: React.FC<Props> = ({ icon, title, content }) => {
+export const Card: React.FC<Props> = ({ data }) => {
+    const { icon, title, content } = data;
     return (
         <div className="flex w-[22.8125rem] shrink-0 flex-col rounded-2xl bg-white p-8 shadow-[16px_32px_56px_0_rgba(143,174,207,0.25)]">
             <div className="flex flex-col">
