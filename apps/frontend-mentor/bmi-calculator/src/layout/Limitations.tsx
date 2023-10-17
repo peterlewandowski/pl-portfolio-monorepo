@@ -64,7 +64,7 @@ export const Limitations = () => {
         <section id="limitations">
             <Container className="flex flex-col pt-16 pb-28">
                 <div className="flex gap-36 pr-24">
-                    <div className="w-2/5">
+                    <div className="w-4/6">
                         <h1 className="text-heading-l mb-8">Limitations of BMI</h1>
                         <p className="text-body-m">
                             Although BMI is often a practical indicator of healthy weight, it is not
