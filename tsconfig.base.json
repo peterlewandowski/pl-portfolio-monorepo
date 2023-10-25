@@ -15,8 +15,8 @@
         "skipDefaultLibCheck": true,
         "baseUrl": ".",
         "paths": {
-            "@pl-portfolio-monorepo/ui": ["libs/ui/src/index.ts"],
-            "@pl-portfolio-monorepo/utils": ["libs/utils/src/index.ts"]
+            "@pl-portfolio-monorepo/utils": ["libs/utils/src/index.ts"],
+            "@prime-react-ui": ["libs/prime-react-ui/src/index.ts"]
         }
     },
     "exclude": ["node_modules", "tmp"]

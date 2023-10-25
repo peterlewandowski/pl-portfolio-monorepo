@@ -1,26 +1,31 @@
 {
-    "tasksRunnerOptions": {
-        "default": {
-            "runner": "nx/tasks-runners/default",
-            "options": {
-                "cacheableOperations": []
-            }
-        }
-    },
-    "affected": {
-        "defaultBase": "main"
-    },
-    "generators": {
-        "@nx/react": {
-            "application": {
-                "babel": true
-            }
-        },
-        "@nx/next": {
-            "application": {
-                "style": "css",
-                "linter": "eslint"
-            }
-        }
+  "tasksRunnerOptions": {
+    "default": {
+      "runner": "nx/tasks-runners/default",
+      "options": {
+        "cacheableOperations": [
+          "build-storybook"
+        ]
+      }
     }
+  },
+  "affected": {
+    "defaultBase": "main"
+  },
+  "generators": {
+    "@nx/react": {
+      "application": {
+        "babel": true
+      },
+      "library": {
+        "unitTestRunner": "jest"
+      }
+    },
+    "@nx/next": {
+      "application": {
+        "style": "css",
+        "linter": "eslint"
+      }
+    }
+  }
 }
