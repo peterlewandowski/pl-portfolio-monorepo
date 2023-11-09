@@ -13,7 +13,17 @@
     "generators": {
         "@nx/react": {
             "application": {
+                "style": "css",
+                "linter": "none",
+                "bundler": "vite",
                 "babel": true
+            },
+            "component": {
+                "style": "css"
+            },
+            "library": {
+                "style": "css",
+                "linter": "none"
             }
         },
         "@nx/next": {
@@ -21,6 +31,11 @@
                 "style": "css",
                 "linter": "eslint"
             }
+        }
+    },
+    "targetDefaults": {
+        "test": {
+            "inputs": ["default", "^default"]
         }
     }
 }
