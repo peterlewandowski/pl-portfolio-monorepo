@@ -25,6 +25,12 @@
                 "style": "css",
                 "linter": "none"
             }
+        },
+        "@nx/next": {
+            "application": {
+                "style": "css",
+                "linter": "eslint"
+            }
         }
     },
     "targetDefaults": {

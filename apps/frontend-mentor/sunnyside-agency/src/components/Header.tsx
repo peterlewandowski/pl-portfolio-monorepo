@@ -1,14 +1,26 @@
-import { useCallback, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { cn } from "@pl-portfolio-monorepo/utils";
+import useClickOutside from "../hooks/useClickOutside";
 import { ReactComponent as HamburgerIcon } from "../images/icon-hamburger.svg";
 import { ReactComponent as LogoSvg } from "../images/logo.svg";
 
 export const Header = () => {
     const [toggleMobileNav, setToggleMobileNav] = useState(false);
+    
+    const { ref, isComponentVisible, setIsComponentVisible } =
+        useClickOutside<HTMLUListElement>(toggleMobileNav);
+
+    useEffect(() => {
+        // Update isComponentVisible when toggleMobileNav changes
+        if (!isComponentVisible) {
+            setToggleMobileNav(false);
+        }
+    }, [isComponentVisible]);
 
     const handleToggleMobileNav = useCallback(() => {
         setToggleMobileNav(!toggleMobileNav);
-    }, [toggleMobileNav]);
+        setIsComponentVisible(!toggleMobileNav);
+    }, [toggleMobileNav, setIsComponentVisible]);
 
     return (
         <header id="header" className="relative">
@@ -26,6 +38,7 @@ export const Header = () => {
                 </div>
                 {/* TODO: mobileNav stretch to viewport width with margins */}
                 <ul
+                    ref={ref}
                     className={cn([
                         "md:static md:flex-row md:items-stretch md:gap-12 md:bg-transparent md:p-0 md:md:text-lg md:font-semibold md:text-white md:before:hidden",
 

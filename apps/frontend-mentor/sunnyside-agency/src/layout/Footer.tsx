@@ -7,18 +7,18 @@ import { ReactComponent as SunnyLogo } from "../images/logo-green.svg";
 export const Footer = () => {
     return (
         <footer id="footer" className="bg-[#90D4C6]">
-            <div className="flex flex-col items-center px-10 py-16 md:px-6">
+            <div className="flex flex-col items-center py-16">
                 <a href="#">
                     <SunnyLogo />
                 </a>
-                <div className="mt-10 grid grid-cols-3 gap-14 text-lg font-semibold text-[#458D7E]">
-                    <a className="hover:text-white" href="#">
+                <div className="mt-10 grid grid-cols-3 gap-14  text-center text-lg font-semibold text-[#458D7E]">
+                    <a className="hover:text-white" href="#about">
                         About
                     </a>
-                    <a className="hover:text-white" href="#">
+                    <a className="hover:text-white" href="#services">
                         Services
                     </a>
-                    <a className="hover:text-white" href="#">
+                    <a className="hover:text-white" href="#projects">
                         Projects
                     </a>
                 </div>

@@ -1,0 +1,54 @@
+{
+    "name": "frontend-mentor-bmi-calculator",
+    "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+    "sourceRoot": "apps/frontend-mentor/bmi-calculator",
+    "projectType": "application",
+    "targets": {
+        "build": {
+            "executor": "@nx/next:build",
+            "outputs": ["{options.outputPath}"],
+            "defaultConfiguration": "production",
+            "options": {
+                "outputPath": "dist/apps/frontend-mentor/bmi-calculator"
+            },
+            "configurations": {
+                "development": {
+                    "outputPath": "apps/frontend-mentor/bmi-calculator"
+                },
+                "production": {}
+            }
+        },
+        "serve": {
+            "executor": "@nx/next:server",
+            "defaultConfiguration": "development",
+            "options": {
+                "buildTarget": "frontend-mentor-bmi-calculator:build",
+                "dev": true
+            },
+            "configurations": {
+                "development": {
+                    "buildTarget": "frontend-mentor-bmi-calculator:build:development",
+                    "dev": true
+                },
+                "production": {
+                    "buildTarget": "frontend-mentor-bmi-calculator:build:production",
+                    "dev": false
+                }
+            }
+        },
+        "export": {
+            "executor": "@nx/next:export",
+            "options": {
+                "buildTarget": "frontend-mentor-bmi-calculator:build:production"
+            }
+        },
+        "lint": {
+            "executor": "@nx/linter:eslint",
+            "outputs": ["{options.outputFile}"],
+            "options": {
+                "lintFilePatterns": ["apps/frontend-mentor/bmi-calculator/**/*.{ts,tsx,js,jsx}"]
+            }
+        }
+    },
+    "tags": []
+}
