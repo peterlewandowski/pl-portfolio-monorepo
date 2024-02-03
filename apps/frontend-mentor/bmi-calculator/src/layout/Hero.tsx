@@ -54,10 +54,12 @@ export const Hero = () => {
                                 <div className="font-['Inter'] text-sm font-normal leading-tight text-slate-500">
                                     Height
                                 </div>
-                                <div className="inline-flex items-start justify-start gap-6 self-stretch rounded-xl border border-zinc-200 bg-white px-6 py-5">
-                                    <div className="shrink grow basis-0 font-['Inter'] text-2xl font-semibold text-slate-800">
-                                        185
-                                    </div>
+                                <div className="inline-flex items-center justify-start gap-6 self-stretch rounded-xl border border-zinc-200 bg-white px-6 py-5">
+                                    <input
+                                        type="number"
+                                        placeholder="0"
+                                        className="input input-ghost w-full max-w-xs"
+                                    />
                                     <div className="font-['Inter'] text-2xl font-semibold text-blue-600">
                                         cm
                                     </div>
@@ -67,10 +69,12 @@ export const Hero = () => {
                                 <div className="font-['Inter'] text-sm font-normal leading-tight text-slate-500">
                                     Weight
                                 </div>
-                                <div className="inline-flex items-start justify-start gap-6 self-stretch rounded-xl border border-zinc-200 bg-white px-6 py-5">
-                                    <div className="shrink grow basis-0 font-['Inter'] text-2xl font-semibold text-slate-800">
-                                        80
-                                    </div>
+                                <div className="inline-flex items-center justify-start gap-6 self-stretch rounded-xl border border-zinc-200 bg-white px-6 py-5">
+                                    <input
+                                        type="number"
+                                        placeholder="0"
+                                        className="input input-ghost w-full max-w-xs"
+                                    />
                                     <div className="font-['Inter'] text-2xl font-semibold text-blue-600">
                                         kg
                                     </div>
