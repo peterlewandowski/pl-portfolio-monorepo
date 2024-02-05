@@ -19,7 +19,7 @@ export const Hero = () => {
                             overall health and well-being.
                         </div>
                     </div>
-                    <div className="inline-flex h-96 w-96 flex-col items-start justify-start gap-8 rounded-2xl bg-white p-8 shadow-[16px_32px_56px_0_rgba(143,174,207,0.25)]">
+                    <div className="inline-flex h-[30rem] w-96 flex-col items-start justify-start gap-8 rounded-2xl bg-white p-8 shadow-[16px_32px_56px_0_rgba(143,174,207,0.25)]">
                         <div className="flex flex-col items-start justify-start gap-2">
                             <div className="font-['Inter'] text-2xl font-semibold text-slate-800">
                                 Enter your details below
