@@ -81,7 +81,7 @@ export const Hero = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="inline-flex items-center justify-center gap-6 self-stretch rounded-bl-2xl rounded-br-full rounded-tl-2xl rounded-tr-full bg-gradient-to-r from-blue-600 to-indigo-500 p-8">
+                        <div className="inline-flex items-center justify-center gap-6 self-stretch rounded-l-lg rounded-r-3xl bg-gradient-to-r from-blue-600 to-indigo-500 p-8">
                             <div className="inline-flex shrink grow basis-0 flex-col items-start justify-center gap-2">
                                 <div className="self-stretch font-['Inter'] text-base font-semibold leading-normal text-white">
                                     Your BMI is...
