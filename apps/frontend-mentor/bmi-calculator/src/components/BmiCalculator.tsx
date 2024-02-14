@@ -1,4 +1,11 @@
+import { useEffect, useState } from "react";
+
 export const BmiCalculator = () => {
+    const [bmiResult, setBmiResult] = useState(0);
+    console.log("bmiResult: ", bmiResult);
+
+
+
     return (
         <div className="inline-flex h-[30rem] w-96 flex-col items-start justify-start gap-8 rounded-2xl bg-white p-8 shadow-[16px_32px_56px_0_rgba(143,174,207,0.25)]">
             <div className="flex flex-col items-start justify-start gap-2">
@@ -33,6 +40,7 @@ export const BmiCalculator = () => {
                     </div>
                     <div className="inline-flex items-center justify-start gap-6 self-stretch rounded-xl border border-zinc-200 bg-white px-6 py-5">
                         <input
+                            name="height"
                             type="number"
                             placeholder="0"
                             className="input input-ghost w-full max-w-xs"
@@ -48,6 +56,7 @@ export const BmiCalculator = () => {
                     </div>
                     <div className="inline-flex items-center justify-start gap-6 self-stretch rounded-xl border border-zinc-200 bg-white px-6 py-5">
                         <input
+                            name="weight"
                             type="number"
                             placeholder="0"
                             className="input input-ghost w-full max-w-xs"
@@ -64,7 +73,7 @@ export const BmiCalculator = () => {
                         Your BMI is...
                     </div>
                     <div className="font-['Inter'] text-6xl font-semibold leading-10 text-white">
-                        23.4
+                        {bmiResult}
                     </div>
                 </div>
                 <div className="shrink grow basis-0">
