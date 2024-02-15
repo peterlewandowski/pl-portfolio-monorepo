@@ -1,10 +1,33 @@
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
+
+type InputsState = {
+    height: number;
+    weight: number;
+};
 
 export const BmiCalculator = () => {
-    const [bmiResult, setBmiResult] = useState(0);
+    const [inputs, setInputs] = useState<InputsState>({ weight: 0, height: 0 });
+    const [bmiResult, setBmiResult] = useState<string | null>(null);
     console.log("bmiResult: ", bmiResult);
 
+    const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        const { name, value } = e.target;
+        setInputs((prevState) => ({ ...prevState, [name]: value ? Number(value) : "" }));
+    };
 
+    const calculateBMI = useCallback(() => {
+        const { height, weight } = inputs;
+        if (weight && height) {
+            const bmiValue = weight / (height / 100) ** 2;
+            setBmiResult(bmiValue.toFixed(1));
+        } else {
+            setBmiResult(null);
+        }
+    }, [inputs]);
+
+    useEffect(() => {
+        calculateBMI();
+    }, [calculateBMI]);
 
     return (
         <div className="inline-flex h-[30rem] w-96 flex-col items-start justify-start gap-8 rounded-2xl bg-white p-8 shadow-[16px_32px_56px_0_rgba(143,174,207,0.25)]">
@@ -44,6 +67,7 @@ export const BmiCalculator = () => {
                             type="number"
                             placeholder="0"
                             className="input input-ghost w-full max-w-xs"
+                            onChange={handleInputChange}
                         />
                         <div className="font-['Inter'] text-2xl font-semibold text-blue-600">
                             cm
@@ -60,6 +84,7 @@ export const BmiCalculator = () => {
                             type="number"
                             placeholder="0"
                             className="input input-ghost w-full max-w-xs"
+                            onChange={handleInputChange}
                         />
                         <div className="font-['Inter'] text-2xl font-semibold text-blue-600">
                             kg
@@ -68,25 +93,43 @@ export const BmiCalculator = () => {
                 </div>
             </div>
             <div className="inline-flex items-center justify-center gap-6 self-stretch rounded-l-2xl rounded-r-[10rem] bg-gradient-to-r from-blue-600 to-indigo-500 p-8">
-                <div className="inline-flex shrink grow basis-0 flex-col items-start justify-center gap-2">
-                    <div className="self-stretch font-['Inter'] text-base font-semibold leading-normal text-white">
-                        Your BMI is...
-                    </div>
-                    <div className="font-['Inter'] text-6xl font-semibold leading-10 text-white">
-                        {bmiResult}
-                    </div>
-                </div>
-                <div className="shrink grow basis-0">
-                    <span className="font-['Inter'] text-sm font-normal leading-tight text-white">
-                        Your BMI suggests you’re a healthy weight. Your ideal weight is between{" "}
-                    </span>
-                    <span className="font-['Inter'] text-sm font-bold leading-tight text-white">
-                        63.3kgs - 85.2kgs
-                    </span>
-                    <span className="font-['Inter'] text-sm font-normal leading-tight text-white">
-                        .
-                    </span>
-                </div>
+                {bmiResult ? (
+                    <>
+                        <div className="inline-flex shrink grow basis-0 flex-col items-start justify-center gap-2">
+                            <div className="self-stretch font-['Inter'] text-base font-semibold leading-normal text-white">
+                                Your BMI is...
+                            </div>
+                            <div className="font-['Inter'] text-6xl font-semibold leading-10 text-white">
+                                {bmiResult}
+                            </div>
+                        </div>
+                        <div className="shrink grow basis-0">
+                            <span className="font-['Inter'] text-sm font-normal leading-tight text-white">
+                                Your BMI suggests you’re a healthy weight. Your ideal weight is
+                                between{" "}
+                            </span>
+                            <span className="font-['Inter'] text-sm font-bold leading-tight text-white">
+                                63.3kgs - 85.2kgs
+                            </span>
+                            <span className="font-['Inter'] text-sm font-normal leading-tight text-white">
+                                .
+                            </span>
+                        </div>
+                    </>
+                ) : (
+                    <>
+                        <div className="inline-flex shrink grow basis-0 flex-col items-start justify-center gap-2">
+                            <div className="self-stretch font-['Inter'] text-base font-semibold leading-normal text-white">
+                                Welcome
+                            </div>
+                        </div>
+                        <div className="shrink grow basis-0">
+                            <p className="font-['Inter'] text-sm font-normal leading-tight text-white">
+                                Enter your height and weight and you’ll see your BMI result here
+                            </p>
+                        </div>
+                    </>
+                )}
             </div>
         </div>
     );
