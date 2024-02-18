@@ -8,7 +8,12 @@ type InputsState = {
 export const BmiCalculator = () => {
     const [inputs, setInputs] = useState<InputsState>({ weight: 0, height: 0 });
     const [bmiResult, setBmiResult] = useState<string | null>(null);
+    const [unit, setUnit] = useState("metric");
     console.log("bmiResult: ", bmiResult);
+
+    const handleUnitChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        setUnit(e.target.value);
+    };
 
     const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         const { name, value } = e.target;
@@ -43,6 +48,7 @@ export const BmiCalculator = () => {
                         name="radio-10"
                         className="radio checked:bg-blue-600"
                         defaultChecked
+                        onChange={handleUnitChange}
                     />
 
                     <div className="font-['Inter'] text-base font-semibold leading-normal text-slate-800">
@@ -50,7 +56,12 @@ export const BmiCalculator = () => {
                     </div>
                 </div>
                 <div className="flex h-8 shrink grow basis-0 items-center justify-start gap-4">
-                    <input type="radio" name="radio-10" className="radio checked:bg-blue-600" />
+                    <input
+                        type="radio"
+                        name="radio-10"
+                        className="radio checked:bg-blue-600"
+                        onChange={handleUnitChange}
+                    />
                     <div className="font-['Inter'] text-base font-semibold leading-normal text-slate-800">
                         Imperial
                     </div>
