@@ -9,7 +9,7 @@ export const BmiCalculator = () => {
     const [inputs, setInputs] = useState<InputsState>({ weight: 0, height: 0 });
     const [bmiResult, setBmiResult] = useState<string | null>(null);
     const [unit, setUnit] = useState("metric");
-    console.log("bmiResult: ", bmiResult);
+    console.log("unit: ", unit);
 
     const handleUnitChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         setUnit(e.target.value);
@@ -45,7 +45,8 @@ export const BmiCalculator = () => {
                 <div className="flex h-8 shrink grow basis-0 items-center justify-start gap-4">
                     <input
                         type="radio"
-                        name="radio-10"
+                        name="unit"
+                        value="metric"
                         className="radio checked:bg-blue-600"
                         defaultChecked
                         onChange={handleUnitChange}
@@ -58,7 +59,8 @@ export const BmiCalculator = () => {
                 <div className="flex h-8 shrink grow basis-0 items-center justify-start gap-4">
                     <input
                         type="radio"
-                        name="radio-10"
+                        name="unit"
+                        value="imperial"
                         className="radio checked:bg-blue-600"
                         onChange={handleUnitChange}
                     />
@@ -72,18 +74,48 @@ export const BmiCalculator = () => {
                     <div className="font-['Inter'] text-sm font-normal leading-tight text-slate-500">
                         Height
                     </div>
-                    <div className="inline-flex items-center justify-start gap-6 self-stretch rounded-xl border border-zinc-200 bg-white px-6 py-5">
-                        <input
-                            name="height"
-                            type="number"
-                            placeholder="0"
-                            className="input input-ghost w-full max-w-xs"
-                            onChange={handleInputChange}
-                        />
-                        <div className="font-['Inter'] text-2xl font-semibold text-blue-600">
-                            cm
+                    {unit === "metric" ? (
+                        <div className="inline-flex items-center justify-start gap-6 self-stretch rounded-xl border border-zinc-200 bg-white px-6 py-5">
+                            <input
+                                name="height"
+                                type="number"
+                                placeholder="0"
+                                className="input input-ghost w-full max-w-xs"
+                                onChange={handleInputChange}
+                            />
+                            <div className="font-['Inter'] text-2xl font-semibold text-blue-600">
+                                cm
+                            </div>
                         </div>
-                    </div>
+                    ) : (
+                        <div className="flex gap-6">
+                            <div className="inline-flex items-center justify-start gap-6 self-stretch rounded-xl border border-zinc-200 bg-white px-6 py-5">
+                                <input
+                                    name="height"
+                                    type="number"
+                                    placeholder="0"
+                                    className="input input-ghost w-full max-w-xs"
+                                    onChange={handleInputChange}
+                                />
+                                <div className="font-['Inter'] text-2xl font-semibold text-blue-600">
+                                    ft
+                                </div>
+                            </div>
+
+                            <div className="inline-flex items-center justify-start gap-6 self-stretch rounded-xl border border-zinc-200 bg-white px-6 py-5">
+                                <input
+                                    name="height"
+                                    type="number"
+                                    placeholder="0"
+                                    className="input input-ghost w-full max-w-xs"
+                                    onChange={handleInputChange}
+                                />
+                                <div className="font-['Inter'] text-2xl font-semibold text-blue-600">
+                                    in
+                                </div>
+                            </div>
+                        </div>
+                    )}
                 </div>
                 <div className="inline-flex shrink grow basis-0 flex-col items-start justify-start gap-2">
                     <div className="font-['Inter'] text-sm font-normal leading-tight text-slate-500">
