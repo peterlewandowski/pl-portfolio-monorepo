@@ -12,7 +12,7 @@ export const MetricForm = ({ formValues, handleInputChange }: Props) => {
             <div className="flex shrink grow basis-0 flex-col items-start justify-start gap-2">
                 <label
                     htmlFor="cm"
-                    className="font-['Inter'] text-sm font-normal leading-tight text-slate-500">
+                    className="text-sm font-normal leading-tight text-slate-500">
                     Height
                 </label>
                 <CustomNumberInput
@@ -25,7 +25,7 @@ export const MetricForm = ({ formValues, handleInputChange }: Props) => {
             <div className="flex shrink grow basis-0 flex-col items-start justify-start gap-2">
                 <label
                     htmlFor="kg"
-                    className="font-['Inter'] text-sm font-normal leading-tight text-slate-500">
+                    className="text-sm font-normal leading-tight text-slate-500">
                     Weight
                 </label>
                 <CustomNumberInput

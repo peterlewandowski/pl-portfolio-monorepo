@@ -13,7 +13,7 @@ export const CustomNumberInput = ({ name, ...props }: NumberInputProps) => {
                 className="input input-ghost w-full max-w-xs"
                 {...props}
             />
-            <p className="font-['Inter'] text-2xl font-semibold text-blue-600">
+            <p className="text-2xl font-semibold text-blue-600">
                 {name?.slice(0, 2)}
             </p>
         </div>
