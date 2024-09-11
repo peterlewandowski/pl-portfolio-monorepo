@@ -47,7 +47,6 @@ const cardsData: CardData[] = [
 ];
 
 const cardDataHashMap: Record<string, CardData> = {};
-console.log("cardDataHashMap: ", cardDataHashMap);
 
 for (const card of cardsData) {
     cardDataHashMap[card.title] = card;

@@ -31,7 +31,7 @@ export const ImperialForm = ({ formValues, handleInputChange }: Props) => {
             </div>
             <div className="flex shrink grow basis-0 flex-col items-start justify-start gap-2">
                 <label
-                    htmlFor="weight_st"
+                    htmlFor="st"
                     className="font-['Inter'] text-sm font-normal leading-tight text-slate-500">
                     Weight
                 </label>
