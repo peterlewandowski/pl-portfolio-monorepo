@@ -1,29 +1,30 @@
+import { FormInputs } from "./BmiCalculator";
 import { CustomNumberInput } from "./CustomNumberInput";
 
 interface Props {
+    formValues: FormInputs;
     handleInputChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
-export const ImperialForm = ({ handleInputChange }: Props) => {
+export const ImperialForm = ({ formValues, handleInputChange }: Props) => {
     return (
         <div className="flex flex-col items-start justify-start gap-6 self-stretch">
             <div className="flex shrink grow basis-0 flex-col items-start justify-start gap-2">
                 <label
-                    htmlFor="height_ft"
+                    htmlFor="ft"
                     className="font-['Inter'] text-sm font-normal leading-tight text-slate-500">
                     Height
                 </label>
                 <div className="flex gap-6">
                     <CustomNumberInput
-                        id="height_ft"
-                        name="height_ft"
-                        inputUnit="ft"
+                        value={formValues.ft}
+                        id="ft"
+                        name="ft"
                         onChange={handleInputChange}
                     />
-
                     <CustomNumberInput
-                        name="height_in"
-                        inputUnit="in"
+                        value={formValues.inches}
+                        name="inches"
                         onChange={handleInputChange}
                     />
                 </div>
@@ -36,14 +37,14 @@ export const ImperialForm = ({ handleInputChange }: Props) => {
                 </label>
                 <div className="flex gap-6">
                     <CustomNumberInput
-                        id="weight_st"
-                        name="weight_st"
-                        inputUnit="st"
+                        value={formValues.st}
+                        id="st"
+                        name="st"
                         onChange={handleInputChange}
                     />
                     <CustomNumberInput
-                        name="weight_kg"
-                        inputUnit="kg"
+                        value={formValues.lbs}
+                        name="lbs"
                         onChange={handleInputChange}
                     />
                 </div>
