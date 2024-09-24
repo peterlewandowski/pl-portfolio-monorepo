@@ -29,7 +29,7 @@ export const LifestyleFactors = () => {
         <section id="lifestyle-factors">
             <Container className="flex gap-8 pt-40 pb-24">
                 {factorsData.map((item) => (
-                    <div key={item.title}>
+                    <div key={item.title} className="w-[365px]">
                         {item.icon}
                         <h2 className="text-heading-m mb-6 mt-10">{item.title}</h2>
                         <p>{item.description}</p>

@@ -6,11 +6,14 @@ import { ReactComponent as LeftCurve } from "../images/pattern-curved-line-left.
 export const WhatYourBMI = () => {
     return (
         <section id="what-your-BMI">
-            <Container className="flex gap-32 pt-56 [&>*]:basis-1/2">
-                <Image src={man} alt="A man eating sushi" width={468} height={533} />
-                <div className="flex max-w-md flex-col">
+            <Container className="flex gap-32 pt-56">
+
+                    <Image src={man} alt="A man eating sushi" width={564
+                    }/>
+
+                <div className="flex w-[465px] flex-col">
                     <LeftCurve className="self-end" />
-                    <h1 className="text-heading-l mt-9 mb-8">What your BMI result means</h1>
+                    <h1 className="text-heading-l mb-8 mt-9">What your BMI result means</h1>
                     <div className="text-body-m text-electricBlue">
                         A BMI range of 18.5 to 24.9 is considered a &apos;healthy weight.&apos;
                         Maintaining a healthy weight may lower your chances of experiencing health
