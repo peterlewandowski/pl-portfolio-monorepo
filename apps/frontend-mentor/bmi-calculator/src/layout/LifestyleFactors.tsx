@@ -27,7 +27,7 @@ const factorsData = [
 export const LifestyleFactors = () => {
     return (
         <section id="lifestyle-factors">
-            <Container className="flex gap-8 pt-40 pb-24">
+            <Container className="flex justify-center gap-8 pt-40 pb-24">
                 {factorsData.map((item) => (
                     <div key={item.title} className="w-[365px]">
                         {item.icon}

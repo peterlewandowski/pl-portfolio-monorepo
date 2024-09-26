@@ -6,12 +6,12 @@ export const Hero = () => {
     return (
         <section id="hero" className="relative">
             <div className="absolute left-6 -z-50 h-[46.0625rem] w-2/3 rounded-bl-3xl rounded-br-3xl bg-gradient-to-r from-white to-cyan-100" />
-            <Container>
-                <div className="pt-20">
-                    <Logo />
-                </div>
-                <div className="mt-7 flex [&>*]:basis-1/2">
-                    <div className="flex items-center">
+            <Container className="flex justify-center">
+                <div className="mt-7 grid grid-cols-2 gap-x-32">
+                    <div className="col-span-2 pt-20">
+                        <Logo />
+                    </div>
+                    <div className="mt-20 flex">
                         <div className="flex w-[29rem] flex-col space-y-8">
                             <h1 className="text-heading-xl text-balance">
                                 Body Mass Index Calculator

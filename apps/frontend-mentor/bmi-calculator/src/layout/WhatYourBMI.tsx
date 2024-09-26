@@ -6,7 +6,7 @@ import { ReactComponent as LeftCurve } from "../images/pattern-curved-line-left.
 export const WhatYourBMI = () => {
     return (
         <section id="what-your-BMI">
-            <Container className="flex gap-32 pt-56">
+            <Container className="flex justify-center gap-32 pt-56">
 
                     <Image src={man} alt="A man eating sushi" width={564
                     }/>
