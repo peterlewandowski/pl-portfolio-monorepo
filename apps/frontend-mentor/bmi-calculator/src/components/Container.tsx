@@ -6,5 +6,5 @@ export type ContainerProps = {
 };
 
 export const Container: React.FC<ContainerProps> = ({ children, className }) => {
-    return <div className={cn(["w-[90rem] mx-auto", className])}>{children}</div>;
+    return <div className={cn(["mx-auto px-28", className])}>{children}</div>;
 };

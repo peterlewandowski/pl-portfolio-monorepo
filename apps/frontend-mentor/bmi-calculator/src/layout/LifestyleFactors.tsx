@@ -27,12 +27,14 @@ const factorsData = [
 export const LifestyleFactors = () => {
     return (
         <section id="lifestyle-factors">
-            <Container className="flex justify-center gap-8 pt-40 pb-24">
+            <Container className="grid grid-cols-3 gap-x-5 pt-56">
                 {factorsData.map((item) => (
-                    <div key={item.title} className="w-[365px]">
+                    <div key={item.title} className="max-w-[365px]">
                         {item.icon}
                         <h2 className="text-heading-m mb-6 mt-10">{item.title}</h2>
-                        <p>{item.description}</p>
+                        <p className="text-body-m text-electricBlue text-balance">
+                            {item.description}
+                        </p>
                     </div>
                 ))}
             </Container>

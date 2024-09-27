@@ -6,7 +6,7 @@ export const Hero = () => {
     return (
         <section id="hero" className="relative">
             <div className="absolute left-6 -z-50 h-[46.0625rem] w-2/3 rounded-bl-3xl rounded-br-3xl bg-gradient-to-r from-white to-cyan-100" />
-            <Container className="flex justify-center">
+            <Container className="">
                 <div className="mt-7 grid grid-cols-2 gap-x-32">
                     <div className="col-span-2 pt-20">
                         <Logo />
