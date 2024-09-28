@@ -16,7 +16,7 @@ const fraunces = Fraunces({
 export default function Home() {
   return (
     <main
-      className={`${fraunces.variable} ${barlow.variable} text-lg`}
+      className={`${fraunces.variable} ${barlow.variable}`}
     >
       <TopSection />
       <About />

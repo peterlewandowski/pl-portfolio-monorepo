@@ -74,6 +74,7 @@ module.exports = {
                 gunmetal: "#253347",
                 electricBlue: "#5E6E85",
                 borderColor: "#D8E2E7",
+                gradientTo: "#D6FCFE",
             },
         },
         darkMode: "class",

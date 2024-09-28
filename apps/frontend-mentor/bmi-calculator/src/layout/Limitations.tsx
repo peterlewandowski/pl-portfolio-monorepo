@@ -61,8 +61,8 @@ export const Limitations = () => {
 
     return (
         <section id="limitations">
-            <Container className="flex flex-col pb-28 pt-16">
-                <div className="flex justify-center gap-36">
+            <Container className="flex flex-col pb-28 pt-32">
+                <div className="flex gap-36">
                     <div className="w-[564px]">
                         <h1 className="text-heading-l mb-8">Limitations of BMI</h1>
                         <p className="text-body-m">

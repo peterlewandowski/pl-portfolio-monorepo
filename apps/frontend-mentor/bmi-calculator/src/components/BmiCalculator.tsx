@@ -121,7 +121,7 @@ export const BmiCalculator = () => {
                         <div className="shrink grow basis-0">
                             <span className="text-sm font-normal leading-tight text-white">
                                 Your BMI suggests you&apos;re a healthy weight. Your ideal weight is
-                                between{" "}
+                                between
                             </span>
                             <span className="text-sm font-bold leading-tight text-white">
                                 63.3kgs - 85.2kgs
@@ -132,7 +132,7 @@ export const BmiCalculator = () => {
                 ) : (
                     <div className="flex flex-col text-white">
                         <h2 className="text-heading-m">Welcome!</h2>
-                        <p className="text-body-s">
+                        <p className="text-body-s mt-4">
                             Enter your height and weight and you&apos;ll see your BMI result here
                         </p>
                     </div>
