@@ -58,13 +58,13 @@ export const BmiCalculator = () => {
     }, [calculateBMI]);
 
     return (
-        <div className="inline-flex w-[35rem] flex-col items-start justify-start gap-8 rounded-2xl bg-white p-8 shadow-[16px_32px_56px_0_rgba(143,174,207,0.25)]">
+        <div className="flex w-[35rem] flex-col items-start justify-start gap-8 rounded-2xl bg-white p-8 shadow-[16px_32px_56px_0_rgba(143,174,207,0.25)]">
             <div className="flex flex-col items-start justify-start gap-2">
                 <div className="text-2xl font-semibold text-slate-800">
                     Enter your details below
                 </div>
             </div>
-            <div className="inline-flex items-start justify-start gap-6 self-stretch">
+            <div className="flex items-start justify-start gap-6">
                 <div className="flex h-8 shrink grow basis-0 items-center justify-start gap-4">
                     <input
                         type="radio"
@@ -98,8 +98,8 @@ export const BmiCalculator = () => {
                     </label>
                 </div>
             </div>
-            <div className="inline-flex items-start justify-start gap-6 self-stretch">
-                <div className="inline-flex shrink grow basis-0 flex-col items-start justify-start gap-2">
+            <div className="flex items-start justify-start gap-6">
+                <div className="flex shrink grow basis-0 flex-col items-start justify-start gap-2">
                     {unit === "metric" ? (
                         <MetricForm formValues={inputs} handleInputChange={handleInputChange} />
                     ) : (
@@ -109,24 +109,23 @@ export const BmiCalculator = () => {
             </div>
             <div className="flex w-full rounded-l-2xl rounded-r-[10rem] bg-gradient-to-r from-blue-600 to-indigo-500 p-8">
                 {metricBmi || imperialBmi ? (
-                    <div className="inline-flex items-center justify-center gap-6 self-stretch">
-                        <div className="inline-flex shrink grow basis-0 flex-col items-start justify-center gap-2">
-                            <div className="self-stretch text-base font-semibold leading-normal text-white">
+                    <div className="flex items-center justify-center gap-6">
+                        <div className="flex flex-1 flex-col items-start justify-center gap-2">
+                            <div className="text-base font-semibold leading-normal text-white">
                                 Your BMI is...
                             </div>
-                            <div className="text-6xl font-semibold leading-10 text-white">
+                            <div className="text-6xl font-semibold text-white">
                                 {unit === "metric" ? metricBmi : imperialBmi}
                             </div>
                         </div>
-                        <div className="shrink grow basis-0">
-                            <span className="text-sm font-normal leading-tight text-white">
+                        <div className="basis-1/2">
+                            <span className="text-sm font-normal text-white">
                                 Your BMI suggests you&apos;re a healthy weight. Your ideal weight is
                                 between
                             </span>
-                            <span className="text-sm font-bold leading-tight text-white">
-                                63.3kgs - 85.2kgs
+                            <span className="text-sm font-bold text-white">
+                                &nbsp;63.3kgs - 85.2kgs.
                             </span>
-                            <span className="text-sm font-normal leading-tight text-white">.</span>
                         </div>
                     </div>
                 ) : (
