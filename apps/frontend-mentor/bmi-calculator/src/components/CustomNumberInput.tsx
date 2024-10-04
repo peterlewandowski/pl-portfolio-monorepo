@@ -4,7 +4,7 @@ interface NumberInputProps extends InputHTMLAttributes<HTMLInputElement> {}
 
 export const CustomNumberInput = ({ name, ...props }: NumberInputProps) => {
     return (
-        <div className="flex items-center justify-start gap-6 self-stretch rounded-xl border border-gray-200 bg-white px-6 py-5 hover:border-blue-500">
+        <div className="flex items-center justify-start gap-6 self-stretch rounded-xl border border-gray-200 bg-white px-6 py-5 focus-within:border-blue-500">
             <input
                 name={name}
                 type="number"
